@@ -1,0 +1,57 @@
+[package]
+name = "f58mqtt_rp2040"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+embassy-time = { version = "0.3.0", path = "../../embassy/embassy-time", features = [
+    "log",
+] }
+cortex-m-rt = "0.7.3"
+embassy-sync = { version = "0.6.0", path = "../../embassy/embassy-sync", features = [
+    "log",
+] }
+embassy-embedded-hal = { version = "0.1.0", path = "../../embassy/embassy-embedded-hal" }
+embassy-usb-logger = { path = "../../embassy/embassy-usb-logger" }
+embassy-futures = { path = "../../embassy/embassy-futures" }
+embassy-executor = { version = "0.5.0", path = "../../embassy/embassy-executor", features = [
+    "task-arena-size-32768",
+    "arch-cortex-m",
+    "executor-thread",
+    "executor-interrupt",
+    "integrated-timers",
+    "log",
+] }
+embassy-rp = { version = "0.1.0", path = "../../embassy/embassy-rp", features = [
+    "unstable-pac",
+    "time-driver",
+    "critical-section-impl",
+    "log",
+] }
+cyw43 = { version = "0.1.0", path = "../../embassy/cyw43", features = [
+    "firmware-logs",
+    "log",
+] }
+cyw43-pio = { version = "0.1.0", path = "../../embassy/cyw43-pio", features = [
+    "overclock",
+] }
+panic-probe = { version = "0.3.1" }
+static_cell = "2"
+log = "0.4"
+embassy-net = { version = "0.4.0", path = "../../embassy/embassy-net", features = [
+    "tcp",
+    "udp",
+    "raw",
+    "dhcpv4",
+    "medium-ethernet",
+    "log",
+] }
+portable-atomic = { version = "1.5", features = ["critical-section"] }
+embedded-io-async = { version = "0.6.1", features = [] }
+rust-mqtt = { version = "0.3.0", default-features = false }
+embedded-nal = "0.8"
+heapless = "0.8.0"
+itertools = { version = "0.13.0", default-features = false }
+embedded-time = "0.12.1"
+const_format = { version = "0.2.32", default-features = false }
+minimq = "0.9.0"
